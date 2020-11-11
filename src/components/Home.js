@@ -1,6 +1,6 @@
 import React from 'react';
 
-class home extends React.Component {
+class Home extends React.Component {
     constructor(props){
         super(props);
         this.state = {result: "none"};
@@ -8,9 +8,7 @@ class home extends React.Component {
 
     componentDidMount(){
         const api = 'http://18.224.61.179:5000/'
-        console.log("component mounted");
-        var result;
-        fetch(api)
+        fetch(api + 'users')
         .then(res=> res.text())
         .then(text=> {
             console.log('parsed: ', text);
@@ -30,4 +28,4 @@ class home extends React.Component {
 
 }
  
-export default home;
+export default Home;
