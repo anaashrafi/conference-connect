@@ -29,10 +29,10 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
  
 import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
+import Connections from './components/Connections';
+import Help from './components/Help';
 import Profile from './components/Profile';
-import Error from './components/Error';
+import Settings from './components/Settings';
 import Navigation from './components/Navigation';
  
 class App extends Component {
@@ -43,10 +43,10 @@ class App extends Component {
           <Navigation />
             <Switch>
              <Route path="/" component={Home} exact/>
-             <Route path="/about" component={About}/>
-             <Route path="/contact" component={Contact}/>
+             <Route path="/connections" component={Connections}/>
+             <Route path="/help" component={Help}/>
              <Route path="/profile" component={Profile}/>
-            <Route component={Error}/>
+             <Route path="/settings" component={Settings}/>
            </Switch>
         </div> 
       </BrowserRouter>
