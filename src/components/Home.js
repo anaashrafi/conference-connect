@@ -20,7 +20,7 @@ class Home extends React.Component {
 
         return (
            <div>
-            <h1>Home</h1>
+            <h1>Home Ana</h1>
             <p>Home page body content {this.state.result}</p>
            </div>
         );
