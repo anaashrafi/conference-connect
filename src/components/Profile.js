@@ -20,7 +20,7 @@ const Profile = () => {
                    <img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111425.svg"
                             width={30} height={30} mode='fit' alt="LinkedIn Icon"></img>
                    </div>
-                  <button class= "btn btn-primary">Edit Profile</button>
+                  <button class= "button">Edit Profile</button>
                 </div>
               </div>
             </div>
