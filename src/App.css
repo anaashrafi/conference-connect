@@ -58,6 +58,16 @@ body {
   margin-left: 10px;
 }
 
+.btn {
+  background-color: #7030a0;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #7030a0;
+  border: none;
+}
+
 img {
   margin-right: 10px;
   margin-left: 10px;

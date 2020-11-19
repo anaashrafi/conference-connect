@@ -47,7 +47,7 @@ class Connections extends React.Component {
          <div>
          <Container>
             <Row style={{marginTop: "20px"}}>
-               <DropdownButton id="dropdown-basic-button" title="Sort">
+               {/* <DropdownButton id="dropdown-basic-button" title="Sort">
                   <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                   <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                   <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
@@ -56,7 +56,26 @@ class Connections extends React.Component {
                   <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                   <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                   <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-               </DropdownButton>
+               </DropdownButton> */}
+               <div class="dropdown">
+               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style={{marginRight: "20px"}}>Sort
+               <span class="caret"></span></button>
+               <ul class="dropdown-menu">
+                  <li><a href="#">HTML</a></li>
+                  <li><a href="#">CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+               </ul>
+               </div>
+
+               <div class="dropdown">
+               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Filter
+               <span class="caret"></span></button>
+               <ul class="dropdown-menu">
+                  <li><a href="#">HTML</a></li>
+                  <li><a href="#">CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+               </ul>
+               </div>
             </Row>
             <Row>
                <Table striped bordered hover responsive="sm" style={{marginTop: "20px"}}>
@@ -137,7 +156,7 @@ class Connections extends React.Component {
                      </tr>
                      <tr>
                         <td>Rachael Webb</td>
-                        <td>RachaelRWebb@indeeed.com</td>
+                        <td>RachaelRWebb@indeed.com</td>
                         <td>804-792-5812</td>
                         <td><a href="www.linkedin.com/in/ana-ashrafi">linkedin.com/in/rachael-webb</a></td>
                         <td>Indeed</td>
