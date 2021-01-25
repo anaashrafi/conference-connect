@@ -4,16 +4,18 @@ import { refreshTokenSetup } from '../utils/refreshToken';
 import { Redirect, useHistory } from 'react-router';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 const clientId = '44240221307-5chg97evjag20irasgpo79dsih4turhb.apps.googleusercontent.com';
-const loggedIn = true;
+var loggedIn = false;
 function Login() {
     const onSuccess = (res) => {
         //this.props.history.push('/profile');
+        var loggedIn = true;
+        console.log(loggedIn);
         console.log('Login Success: currentUser:', res.profileObj);
-        alert(
+        /*alert(
           `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
-        );
+        );*/
         refreshTokenSetup(res);
-        //loggedIn = true;
+
         // <Redirect to="/home" />
       };
     
@@ -22,14 +24,12 @@ function Login() {
         alert(
           `Failed to login. 😢`
         );
-        //loggedIn = false;
+        var loggedIn = false;
       };
       
       return (
         <div>
-        {/* <Route exact path="/">
-                {loggedIn ? <Redirect to="/home" /> : <Login />}
-        </Route> */}
+
           <GoogleLogin
             clientId={clientId}
             buttonText="Login"
@@ -37,8 +37,11 @@ function Login() {
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
             style={{ marginTop: '100px' }}
-            isSignedIn={true}
+            //isSignedIn={true}
           />
+          <Route exact path="/">
+                {loggedIn ? <Redirect to="/home" /> : <Redirect to="/" />}
+          </Route>
         </div>
       );
 }
