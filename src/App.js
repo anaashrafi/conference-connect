@@ -28,14 +28,16 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
- 
+import { Redirect, useHistory } from 'react-router';
 import Home from './components/Home';
+import Login from './components/Login';
 import Connections from './components/Connections';
 import Help from './components/Help';
 import Profile from './components/Profile';
 import Settings from './components/Settings';
 import Navigation from './components/Navigation';
- 
+import Logout from './components/Logout';
+const loggedIn = false;
 class App extends Component {
   render() {
     return (      
@@ -43,11 +45,17 @@ class App extends Component {
         <div>
           <Navigation />
             <Switch>
-             <Route path="/" component={Home} exact/>
-             <Route path="/connections" component={Connections}/>
-             <Route path="/help" component={Help}/>
-             <Route path="/profile" component={Profile}/>
-             <Route path="/settings" component={Settings}/>
+             <Route path="/" component={Login} exact/>
+             {/* <Route exact path="/">
+                {loggedIn ? <Redirect to="/home" /> : <Login />}
+             </Route> */}
+             {/* <Navigation /> */}
+              <Route path="/home" component={Home}/>
+              <Route path="/connections" component={Connections}/>
+              <Route path="/help" component={Help}/>
+              <Route path="/profile" component={Profile}/>
+              <Route path="/settings" component={Settings}/>
+              <Route path="/home" component={Logout}/>
            </Switch>
         </div> 
       </BrowserRouter>

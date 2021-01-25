@@ -12,7 +12,8 @@ const Navigation = () => {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    {/* <a class="nav-item nav-link" href="/">Login<span class="sr-only">(current)</span></a> */}
+                    <a class="nav-item nav-link" href="/home">Home</a>
                     <a class="nav-item nav-link" href="/connections">Connections</a>
                     <a class="nav-item nav-link" href="/profile">Profile</a>
                     <a class="nav-item nav-link" href="/help">Help</a>
